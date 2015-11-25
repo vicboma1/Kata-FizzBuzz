@@ -18,20 +18,20 @@ class FizzBuzz(){
 
     }
 
+    public fun whenToValue(i: Int) = when {
+            isMultiple(i,THREE) && isMultiple(i,FIVE) -> "$FIZZ$BUZZ"
+            isMultiple(i,THREE)  -> "$FIZZ"
+            isMultiple(i,FIVE)  -> "$BUZZ"
+            else -> "$i"
+        }+"$CARRY"
+    
+
     public fun execute(sb : StringBuilder) : String {
-        for(i in INIT_RANGE..END_RANGE_INCLUSIVE){
-            sb.append(
-                    when {
-                        isMultiple(i,THREE) && isMultiple(i,FIVE) -> "$FIZZ$BUZZ"
-                        isMultiple(i,THREE)  -> "$FIZZ"
-                        isMultiple(i,FIVE)  -> "$BUZZ"
-                        else -> "$i"
-                    }+"$CARRY"
-                )
-            }
+        for(i in INIT_RANGE..END_RANGE_INCLUSIVE)
+            sb.append(whenToValue(i))
+            
         return sb.toString()
     }
-
 
     private fun isMultiple(a : Int, b :Int) = (a % b) == ZERO
 }
