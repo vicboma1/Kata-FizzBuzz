@@ -1,6 +1,8 @@
 # Kata FizzBuzz
 
 ##Kotlin
+
+###Version 1
 Source
 ```kotlin
 class FizzBuzz(){
@@ -20,20 +22,20 @@ class FizzBuzz(){
 
     }
 
+    public fun whenToValue(i: Int) = when {
+            isMultiple(i,THREE) && isMultiple(i,FIVE) -> "$FIZZ$BUZZ"
+            isMultiple(i,THREE)                       -> "$FIZZ"
+            isMultiple(i,FIVE)                        -> "$BUZZ"
+            else -> "$i"
+        }+"$CARRY"
+    
+
     public fun execute(sb : StringBuilder) : String {
-        for(i in INIT_RANGE..END_RANGE_INCLUSIVE){
-            sb.append(
-                    when {
-                        isMultiple(i,THREE) && isMultiple(i,FIVE) -> "$FIZZ$BUZZ"
-                        isMultiple(i,THREE)  -> "$FIZZ"
-                        isMultiple(i,FIVE)  -> "$BUZZ"
-                        else -> "$i"
-                    }+"$CARRY"
-                )
-            }
+        for(i in INIT_RANGE..END_RANGE_INCLUSIVE)
+            sb.append(whenToValue(i))
+            
         return sb.toString()
     }
-
 
     private fun isMultiple(a : Int, b :Int) = (a % b) == ZERO
 }
@@ -57,6 +59,72 @@ class FizzBuzzTest() {
 
         val sb = StringBuilder()
         val result = fizzBuzz.execute(sb)
+
+        Assert.assertEquals("Not same", expected.value ,result)
+    }
+
+}
+```
+
+###Version 2
+Source
+```kotlin
+class FizzBuzz2(){
+
+    companion object {
+        val FIZZ = "Fizz"
+        val BUZZ = "Buzz"
+        val FIZZBUZZ = "$FIZZ$BUZZ"
+        val CARRY = "\n"
+        val ZERO = 0
+        val FIVE = 5
+        val THREE = 3 
+        val FIFTEEN = FIVE * THREE
+        val INIT_RANGE = 1
+        val END_RANGE_INCLUSIVE = 100
+    }
+
+    init {
+
+    }
+
+    public fun toValue(i : Int )  = mapOf(
+        ZERO                   to i,
+        isMultiple(i, THREE)   to FIZZ,
+        isMultiple(i, FIVE)    to BUZZ,
+        isMultiple(i, FIFTEEN) to FIZZBUZZ)[ZERO].toString()+"$CARRY"
+
+    public fun execute(sb : StringBuilder) : String {
+        for(i in INIT_RANGE..END_RANGE_INCLUSIVE)
+            sb.append(toValue(i))
+        
+        return sb.toString()
+    }
+
+
+    private fun isMultiple(a : Int, b :Int) = (a % b)
+}
+
+```
+
+Test
+```kotlin
+
+import org.junit.Assert
+import org.junit.Test
+
+/**
+ * Created by vicboma on 25/11/15.
+ */
+class FizzBuzz2Test() {
+    @Test
+    @Throws(Exception::class)
+    fun testMain(){
+        val expected = FizzBuzzExpected()
+        val fizzBuzz2 = FizzBuzz2()
+
+        val sb = StringBuilder()
+        val result = fizzBuzz2.execute(sb)
 
         Assert.assertEquals("Not same", expected.value ,result)
     }
