@@ -2,7 +2,7 @@
 
 ##Kotlin
 
-###Version 1
+###Version 1 - Time: 2ms
 Source
 ```kotlin
 class FizzBuzz(){
@@ -41,7 +41,7 @@ class FizzBuzz(){
 }
 ```
 
-###Version 2
+###Version 2 - Time: 14ms
 Source
 ```kotlin
 class FizzBuzz2(){
@@ -82,7 +82,7 @@ class FizzBuzz2(){
 
 ```
 
-###Version 3
+###Version 3 - Time: 14ms
 Source
 ```kotlin
 class FizzBuzz3(){
@@ -122,7 +122,7 @@ class FizzBuzz3(){
 
 ```
 
-###Version 4
+###Version 4 - Time: 24ms
 Source
 ```kotlin
 class FizzBuzz4(){
