@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/kotlin/FizzBuzz.iml" filepath="$PROJECT_DIR$/kotlin/FizzBuzz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kata-FizzBuzz.iml" filepath="$PROJECT_DIR$/Kata-FizzBuzz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlin/kotlin.iml" filepath="$PROJECT_DIR$/kotlin/kotlin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/src.iml" filepath="$PROJECT_DIR$/java/src.iml" />
+    </modules>
+  </component>
+</project>
