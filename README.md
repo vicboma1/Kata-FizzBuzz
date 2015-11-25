@@ -41,31 +41,6 @@ class FizzBuzz(){
 }
 ```
 
-Test
-```kotlin
-
-import org.junit.Assert
-import org.junit.Test
-
-/**
- * Created by vicboma on 25/11/15.
- */
-class FizzBuzzTest() {
-    @Test
-    @Throws(Exception::class)
-    fun testMain(){
-        val expected = FizzBuzzExpected()
-        val fizzBuzz = FizzBuzz()
-
-        val sb = StringBuilder()
-        val result = fizzBuzz.execute(sb)
-
-        Assert.assertEquals("Not same", expected.value ,result)
-    }
-
-}
-```
-
 ###Version 2
 Source
 ```kotlin
@@ -105,31 +80,6 @@ class FizzBuzz2(){
     private fun isMultiple(a : Int, b :Int) = (a % b)
 }
 
-```
-
-Test
-```kotlin
-
-import org.junit.Assert
-import org.junit.Test
-
-/**
- * Created by vicboma on 25/11/15.
- */
-class FizzBuzz2Test() {
-    @Test
-    @Throws(Exception::class)
-    fun testMain(){
-        val expected = FizzBuzzExpected()
-        val fizzBuzz2 = FizzBuzz2()
-
-        val sb = StringBuilder()
-        val result = fizzBuzz2.execute(sb)
-
-        Assert.assertEquals("Not same", expected.value ,result)
-    }
-
-}
 ```
 
 ###Version 3
@@ -222,19 +172,18 @@ import org.junit.Test
 /**
  * Created by vicboma on 25/11/15.
  */
-class FizzBuzz4Test() {
+class FizzBuzz[1..4]Test() {
     @Test
     @Throws(Exception::class)
     fun testMain(){
         val expected = FizzBuzzExpected()
-        val fizzBuzz4 = FizzBuzz4()
+        val fizzBuzz[1..4] = FizzBuzz[1..4]()
 
         val sb = StringBuilder()
-        val result = fizzBuzz4.execute(sb)
+        val result = fizzBuzz[1..4].execute(sb)
 
         Assert.assertEquals("Not same", expected.value ,result)
     }
-
 }
 
 ```
