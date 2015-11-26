@@ -18,18 +18,18 @@ class FizzBuzz(){
 
     }
 
-    public fun whenToValue(i: Int) = when {
-            isMultiple(i,THREE) && isMultiple(i,FIVE) -> "$FIZZ$BUZZ"
-            isMultiple(i,THREE)  -> "$FIZZ"
-            isMultiple(i,FIVE)  -> "$BUZZ"
-            else -> "$i"
-        }+"$CARRY"
-    
+    public fun Int.toFizzBuzz() = when {
+        isMultiple(this,THREE) && isMultiple(this,FIVE) -> "$FIZZ$BUZZ"
+        isMultiple(this,THREE) -> "$FIZZ"
+        isMultiple(this,FIVE)  -> "$BUZZ"
+        else -> "$this"
+    }+"$CARRY"
+
 
     public fun execute(sb : StringBuilder) : String {
         for(i in INIT_RANGE..END_RANGE_INCLUSIVE)
-            sb.append(whenToValue(i))
-            
+            sb.append(i.toFizzBuzz())
+
         return sb.toString()
     }
 
