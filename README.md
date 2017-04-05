@@ -1,14 +1,14 @@
 # Kata FizzBuzz
 
-#Build 
+# Build 
 
 [![Build Status](https://travis-ci.org/vicboma1/Kata-FizzBuzz.svg)](https://travis-ci.org/vicboma1/Kata-FizzBuzz) 
 ![](https://img.shields.io/badge/Java-1.8-blue.svg?logoWidth=8)
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.0.0--beta--1038-blue.svg)](http://kotlinlang.org) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.eluder.coveralls/coveralls-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.eluder.coveralls/coveralls-maven-plugin/)
 
-##Kotlin
+## Kotlin
 
-###Version 1 - Time: 2ms
+### Version 1 - Time: 2ms
 Source
 ```kotlin
 class FizzBuzz(){
@@ -47,7 +47,7 @@ class FizzBuzz(){
 }
 ```
 
-###Version 2 - Time: 14ms
+### Version 2 - Time: 14ms
 Source
 ```kotlin
 class FizzBuzz2(){
@@ -88,7 +88,7 @@ class FizzBuzz2(){
 
 ```
 
-###Version 3 - Time: 14ms
+### Version 3 - Time: 14ms
 Source
 ```kotlin
 class FizzBuzz3(){
@@ -128,7 +128,7 @@ class FizzBuzz3(){
 
 ```
 
-###Version 4 - Time: 24ms
+## #Version 4 - Time: 24ms
 Source
 ```kotlin
 class FizzBuzz4(){
@@ -195,7 +195,7 @@ class FizzBuzz[1..4]Test() {
 ```
 
 
-##Java
+## Java
 Source
 ```java
 public class FizzBuzz {
