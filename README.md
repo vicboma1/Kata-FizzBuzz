@@ -4,7 +4,9 @@
 
 [![Build Status](https://travis-ci.org/vicboma1/Kata-FizzBuzz.svg)](https://travis-ci.org/vicboma1/Kata-FizzBuzz) 
 ![](https://img.shields.io/badge/Java-1.8-blue.svg?logoWidth=8)
-[![Kotlin](https://img.shields.io/badge/Kotlin-1.0.0--beta--1038-blue.svg)](http://kotlinlang.org) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.eluder.coveralls/coveralls-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.eluder.coveralls/coveralls-maven-plugin/) [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=vicboma1_Microservices-SpringBoot-ReactorCore&metric=alert_status)](https://sonarcloud.io/dashboard/index/vicboma1_Microservices-SpringBoot-ReactorCore)
+[![Kotlin](https://img.shields.io/badge/Kotlin-1.0.0--beta--1038-blue.svg)](http://kotlinlang.org) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.eluder.coveralls/coveralls-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.eluder.coveralls/coveralls-maven-plugin/)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=vicboma1_Kata-FizzBuzz&metric=alert_status)](https://sonarcloud.io/dashboard/index/vicboma1_Kata-FizzBuzz)
+
 
 ## Kotlin
 
