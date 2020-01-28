@@ -1,10 +1,4 @@
 dist: trusty
-
-language: java
-jdk:
-  - oraclejdk8
-  - oraclejdk9
-  - openjdk11
   
 sudo: false
 notifications:
@@ -20,12 +14,11 @@ os:
   - linux
 
 script:
- - jdk_switcher use oraclejdk8
   - mvn test -f ./kotlin/pom.xml
   - mvn test -f ./java/pom.xml
 
 after_success:
-  - cd source
+  - cd kotlin
   - mvn clean test cobertura:cobertura coveralls:report
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=vicboma1_Kata-FizzBuzz
   
@@ -33,4 +26,4 @@ addons:
   sonarcloud:
     organization: "vicboma1" # the key of the org you chose at step #3
     token:
-      secure: "a3ea36cb676926ab10d505b20b2a2cca43465461" # encrypted value of your token
+      secure: "c7ec4d04531e15d55ea4bd51af8676f64567bc74" # encrypted value of your token
