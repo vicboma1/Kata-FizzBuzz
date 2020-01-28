@@ -21,6 +21,9 @@ after_success:
   - cd kotlin
   - mvn clean test cobertura:cobertura coveralls:report
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=vicboma1_Kata-FizzBuzz
+  - cd ../java
+  - mvn clean test cobertura:cobertura coveralls:report
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=vicboma1_Kata-FizzBuzz
   
 addons:
   sonarcloud:
